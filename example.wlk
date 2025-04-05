@@ -46,7 +46,7 @@ object neo { // no pesa nada, solo puede llamar cuando tiene credito
 
 
  
-object lincolnHawk { // pesa 500kg cuando esta con el camion + cada acoplado, cada acoplado pesa 500kg, tambien tiene bici que pesa 10kg. no puede llamar
+object hawk { // pesa 500kg cuando esta con el camion + cada acoplado, cada acoplado pesa 500kg, tambien tiene bici que pesa 10kg. no puede llamar
         var pesoPropio = 70
         var vehiculoActual = bicicleta
 
