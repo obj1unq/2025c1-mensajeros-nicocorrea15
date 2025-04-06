@@ -27,7 +27,6 @@ object chuckNorris { // pesa 900 y puede llamar
 }
 
 object neo { // no pesa nada, solo puede llamar cuando tiene credito 
-   const peso       = 0
    var   tieneCredito = false 
 
         method peso() {
@@ -39,7 +38,7 @@ object neo { // no pesa nada, solo puede llamar cuando tiene credito
 
 		}
 
-		method neoCredito(valor) {
+		method tieneCredito(valor) {
 			tieneCredito = valor
 		}
 }
@@ -53,6 +52,10 @@ object hawk { // pesa 500kg cuando esta con el camion + cada acoplado, cada acop
     method peso() {
        return pesoPropio + vehiculoActual.peso()
   }
+    
+    method cambiarPesoPropio(pesoActual) {
+      pesoPropio = pesoActual
+    }
 
     method puedeLlamar() {
         return false
@@ -79,7 +82,14 @@ object camion {
   method peso() {
     return 500 + 500 * cantidadDeAcoplados
   }
+   
+  method acoplados(cantidad) {
+    cantidadDeAcoplados = cantidad
+  }
 }
+
+
+
 
 object paqueteDeGeorge {
   var estaPago = true
